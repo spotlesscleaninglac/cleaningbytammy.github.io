@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Book a Cleaning – Tammy's Spotless Cleaning</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">Tammy's Spotless Cleaning</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="instant-quote.html">Instant Quote</a>
+      <a href="book.html" class="active">Book</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <h1>Book a Cleaning</h1>
+    <p>Choose from the days currently open.</p>
+
+    <form id="booking-form" class="card">
+      <h2>Your Info</h2>
+
+      <label>Name<input type="text" name="name" required /></label>
+      <label>Phone<input type="tel" name="phone" required /></label>
+      <label>Email<input type="email" name="email" required /></label>
+
+      <h2>Booking Details</h2>
+
+      <label>Available Date<input type="date" id="bookingDate" name="date" required /></label>
+
+      <label>
+        Time (10 AM – 5 PM)
+        <select id="bookingTime" name="time" required></select>
+      </label>
+
+      <label>
+        Service Type
+        <select name="serviceType" required>
+          <option value="">Select</option>
+          <option value="standard">Standard Clean</option>
+          <option value="deep">Deep Clean</option>
+          <option value="move">Move-In / Move-Out</option>
+        </select>
+      </label>
+
+      <button type="submit" class="btn primary">Confirm Booking Request</button>
+      <p class="note">You’ll receive a confirmation by text and email.</p>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Tammy's Spotless Cleaning</p>
+  </footer>
+</body>
+</html>
