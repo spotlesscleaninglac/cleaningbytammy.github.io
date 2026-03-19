@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Instant Quote – Tammy's Spotless Cleaning</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">Tammy's Spotless Cleaning</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="instant-quote.html" class="active">Instant Quote</a>
+      <a href="book.html">Book</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <h1>Instant Quote</h1>
+    <p>Fill this out to see an estimated price.</p>
+
+    <form id="quote-form" class="card">
+      <h2>Your Info</h2>
+
+      <label>Name<input type="text" name="name" required /></label>
+      <label>Phone<input type="tel" name="phone" required /></label>
+      <label>Email<input type="email" name="email" required /></label>
+      <label>Address<input type="text" name="address" required /></label>
+
+      <label>
+        City
+        <select name="city" required>
+          <option value="">Select</option>
+          <option value="Lacombe">Lacombe</option>
+          <option value="Slidell">Slidell</option>
+          <option value="Mandeville">Mandeville</option>
+          <option value="Covington">Covington</option>
+        </select>
+      </label>
+
+      <h2>Service Details</h2>
+
+      <label>
+        Service Type
+        <select name="serviceType" id="serviceType" required>
+          <option value="">Select</option>
+          <option value="standard">Standard Clean</option>
+          <option value="deep">Deep Clean</option>
+          <option value="move">Move-In / Move-Out</option>
+        </select>
+      </label>
+
+      <label>
+        Approximate Square Footage
+        <input type="number" name="squareFeet" id="squareFeet" min="300" step="50" required />
+      </label>
+
+      <fieldset>
+        <legend>Add-Ons</legend>
+        <label><input type="checkbox" name="addons" value="fridge" /> Inside Fridge</label>
+        <label><input type="checkbox" name="addons" value="oven" /> Inside Oven</label>
+        <label><input type="checkbox" name="addons" value="windows" /> Interior Windows</label>
+      </fieldset>
+
+      <label>Preferred Date<input type="date" name="preferredDate" /></label>
+
+      <div class="quote-total">
+        <p>Estimated Total: <span id="quoteTotal">$0</span></p>
+      </div>
+
+      <button type="button" class="btn primary" id="calculateQuote">Calculate Estimate</button>
+      <button type="submit" class="btn secondary">Send Quote Request</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Tammy's Spotless Cleaning</p>
+  </footer>
+</body>
+</html>
